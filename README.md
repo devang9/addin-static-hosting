@@ -1,1 +1,0 @@
-# addin-static-hosting
