@@ -16,8 +16,8 @@
                 "&messageId=" + encodeURIComponent(item.itemId) +
                 "&subject=" + item.normalizedSubject +
                 "&sender=" + item.sender.emailAddress +
-                "&to=" + buildEmailAddressesString(item.to)
-                "&cc=" + buildEmailAddressesString(item.cc)
+                "&to=" + buildEmailAddressesString(item.to) +
+                "&cc=" + buildEmailAddressesString(item.cc) +
                 "&bcc=" + buildEmailAddressesString(item.bcc);
             var url = "https://apps.powerapps.com/play/" + appId + "?source=iframe" + parameters;
             console.log(url);
