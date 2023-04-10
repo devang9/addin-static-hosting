@@ -8,7 +8,7 @@
         $(document).ready(function () {
             var appId = "c2650fc8-e65a-464e-a7b7-3862bc2213f1";
             var item = Office.context.mailbox.item;
-            console.log("itemid:"+item.itemId);
+            //console.log("itemid:"+item.itemId);
             var parameters =
                 "&subject=" + item.subject +
                 "&dateTimeReceived=" + item.dateTimeCreated +
@@ -16,9 +16,11 @@
                 "&messageId=" + encodeURIComponent(item.itemId) +
                 "&subject=" + item.normalizedSubject +
                 "&sender=" + item.sender.emailAddress +
-                "&to=" + buildEmailAddressesString(item.to);
+                "&to=" + buildEmailAddressesString(item.to)
+                "&cc=" + buildEmailAddressesString(item.cc)
+                "&bcc=" + buildEmailAddressesString(item.bcc);
             var url = "https://apps.powerapps.com/play/" + appId + "?source=iframe" + parameters;
-            //console.log(url);
+            console.log(url);
             $('#canvas-iframe').attr("src", url);
         });
     };
