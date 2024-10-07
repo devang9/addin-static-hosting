@@ -6,7 +6,7 @@
   // The Office initialize function must be run each time a new page is loaded.
     Office.initialize = function (reason) {
         $(document).ready(function () {
-            var appId = "c2650fc8-e65a-464e-a7b7-3862bc2213f1";
+            var appId = "b7cab1f3-92ef-44bb-a1f0-0476f1241b25";
             var item = Office.context.mailbox.item;
             //console.log("itemid:"+item.itemId);
             var parameters =
